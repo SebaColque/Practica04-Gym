@@ -1,0 +1,504 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-naranja: rgb(255, 168, 7)
+}
+
+body{
+    background: url(tactile_noise.webp);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+hr{
+    border: 1px solid black;
+    opacity: 0.5;
+}
+
+/* INTRO */
+.intro{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-naranja);
+    animation: intro 0s linear 0s 1 normal forwards;
+}
+
+.intro .intro-logo{
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: intro-logo 2s linear 0s 1 normal;
+}
+
+.intro h2{
+    font-size: 40px;
+    animation: intro-titulo 3s ease-out 0s 1 normal;
+}
+
+.intro .sombra{
+    background-color: rgba(255, 168, 7, 0.342);
+    width: 60%;
+    height: 5px;
+    margin-top: 20px;
+}
+
+.intro .carga{
+    background-color: var(--color-naranja);
+    width: 0;
+    height: 5px;
+    animation: intro-carga 3s ease-in-out 0s 1 normal;
+}
+
+/* HEADER */
+.header{
+    background-color: rgb(19, 19, 19);
+    color: var(--color-naranja);
+    padding: 15px;
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenido-header span{
+    font-size: 30px;
+}
+
+.logo-pagina .logo:hover{
+    animation: logo 1s linear 0s 1 normal;
+}
+
+.header a{
+    color: var(--color-naranja);
+}
+
+.titulo h1:hover{
+    animation: titulo 0.7s ease-in-out 0s 1 normal;
+}
+
+.usuario{
+    cursor: pointer;
+}
+
+.menu{
+    background-color: var(--color-naranja);
+    color: black;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 58px;
+    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 0.747);
+    display: none;
+    z-index: 2;
+}
+
+.show{
+    display: block;
+}
+
+.menu .triangulo{
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    border-left: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--color-naranja);
+}
+
+.menu li{
+    padding: 10px 0;
+}
+
+.menu li a{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu li a:hover{
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.534);
+    font-weight: bolder;
+}
+
+/* NAVBAR */
+.navbar,
+.navbar-responsive{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.navbar ul,
+.navbar-responsive ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar li,
+.navbar-responsive li{
+    padding: 10px;
+}
+
+.navbar a,
+.navbar-responsive a{
+    padding: 0 10px;
+    transition: all 0.5s;
+    text-align: center;
+    /* color: rgba(255, 255, 255); */
+}
+
+.navbar a:hover,
+.navbar-responsive a:hover span,
+.navbar-responsive a:hover ion-icon{
+    color: var(--color-naranja);
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.navbar-responsive a:hover{
+    margin: 30px;
+}
+
+.navbar-responsive span,
+.navbar-responsive ion-icon{
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+.navbar-responsive{
+    display: none;
+}
+
+/* CONTENIDO */
+.contenido{
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    width: 100%;
+    height: 1000px;
+    /* margin: 20px auto; */
+    /* box-shadow: 0 0 5px rgb(255, 168, 7, 0.2); */
+    /* padding: 20px; */
+}
+
+/* INICIO */
+.inicio{
+    background: url(pexels-estudio-polaroid-3112004.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 40% 55%;
+    box-shadow: 0 7px 8px black;
+}
+
+.inicio h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--color-naranja);
+    text-shadow: 4px 4px 10px black;
+}
+
+.inicio p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 80px 0;
+    padding: 20px;
+}
+
+/* EJERCICIOS */
+.ejercicios .texto{
+    background-color: rgba(59, 59, 59, 0.4);
+    padding: 55px 30px;
+}
+
+.ejercicios .texto h2{
+    color: var(--color-naranja);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding-bottom: 5px;
+}
+
+.ejercicios .contenedor-imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(59, 59, 59, 0.4);
+    position: relative;
+}
+
+.ejercicios img.cuerpo{
+    padding: 20px 0px;
+    width: 40%;
+    height: 50%;
+}
+
+.ejercicios .musculo{
+    background-color: var(--color-naranja);
+    padding: 5px 20px;
+    color: black;
+    box-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    /* z-index: -0; */
+}
+
+.ejercicios .hombro{
+    position: absolute;
+    top: 5%;
+    left: 31%;
+}
+.ejercicios .bicep{
+    position: absolute;
+    top: 14%;
+    left: 29%;
+}
+.ejercicios .abdomen{
+    position: absolute;
+    top: 20%;
+    left: 23%;
+}
+.ejercicios .cuadriceps{
+    position: absolute;
+    top: 29%;
+    left: 25%;
+}
+.ejercicios .pectoral{
+    position: absolute;
+    top: 5%;
+    left: 60%;
+}
+.ejercicios .tricep{
+    position: absolute;
+    top: 57%;
+    left: 27%;
+}
+.ejercicios .isquios{
+    position: absolute;
+    top: 80%;
+    left: 27%;
+}
+.ejercicios .espalda{
+    position: absolute;
+    top: 54%;
+    left: 62%;
+}
+.ejercicios .gluteos{
+    position: absolute;
+    top: 73%;
+    left: 67%;
+}
+.ejercicios .gemelos{
+    position: absolute;
+    top: 86%;
+    left: 65%;
+}
+
+/* INFO MUSCULOS */
+.info-musculo-bicep{
+    background-color: black;
+    width: 80%;
+    margin: auto;
+    border-radius: 30px;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    display: none;
+}
+
+.info-musculo-bicep .contenedor-info-musculo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-musculo-bicep .contenedor-info-musculo .texto-info-musculo{
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color-naranja);
+    text-align: center;
+    color: black;
+    letter-spacing: 8px;
+    box-shadow: 0 2px 5px var(--color-naranja);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-musculo-bicep .contenedor-info-musculo .texto-info-musculo .cerrar{
+    cursor: pointer;
+}
+
+.info-musculo-bicep .contenedor-info-musculo .imagenes-ejercicio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    width: 100%;
+}
+
+.info-musculo-bicep .contenedor-info-musculo .imagenes-ejercicio .img-ejer{
+    width: 40%;
+    border-radius: 40px;
+    max-height: 130px;
+    box-shadow: 2px 2px 10px rgb(255, 168, 7, 0.5);
+    margin: 15px;
+}
+
+.show-info{
+    display: block;
+    animation: mostrar-info .2s linear 0s 1 normal;
+}
+
+/* Animaciones */
+@keyframes logo {
+    0%{
+        transform: rotate(0) scale(1)
+    }
+    50%{
+        transform: rotate(90deg) scale(1.3);
+    }
+    to{
+        transform: rotate(180deg) scale(1)
+    }
+}
+
+@keyframes titulo {
+    0%{
+        letter-spacing: normal;
+    }
+    50%{
+        letter-spacing: 10px;
+    }
+    100%{
+        letter-spacing: normal;
+    }
+}
+
+@keyframes intro {
+    0%{
+        cursor: none;
+        opacity: 1;
+    }
+    90%{
+        cursor: none;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+@keyframes intro-logo {
+    0%{
+        transform: translate(0, -1000px);
+    }
+    60%{
+        transform: translate(0);
+    }
+    70%{
+        transform: translate(0, -30px);
+    }
+    80%{
+        transform: translate(0);
+    }
+    90%{
+        transform: translate(0, -15px);
+    }
+}
+
+@keyframes intro-carga {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes intro-titulo {
+    0%{
+        transform: scale(0);
+    }
+    15%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes mostrar-info {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE-DESIGN */
+@media screen and (max-width: 740px) {
+    .navbar{
+        display: none;
+    }
+
+    .navbar-responsive{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar-responsive a:hover{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .navbar-responsive span,
+    .navbar-responsive ion-icon{
+        font-size: 15px;
+    }
+}

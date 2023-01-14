@@ -4,9 +4,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GymCo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     
+    <!-- INTRO -->
+    <div class="intro">
+        <span class="material-symbols-outlined intro-logo">
+            fitness_center
+            </span>
+        <h2>GymCo</h2>
+        <div class="sombra">
+            <div class="carga"></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="contenido-header">
+            <div class="logo-pagina">
+                <span class="material-symbols-outlined logo">
+                    fitness_center
+                    </span>
+            </div>
+            <div class="titulo">
+                <a href="#">
+                    <h1>GymCo</h1>
+                </a>
+            </div>
+            <div class="usuario" id="usuario">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        account_circle
+                        </span>
+                </a>
+                <div class="menu">
+                    <div class="triangulo"></div>
+                    <ul>
+                        <li><a href="#">Iniciar Sesion</a></li>
+                        <hr>
+                        <li><a href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="contenido-navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                |
+                <li><a href="#ejercicios">Ejercicios</a></li>
+                |
+                <li><a href="#">Calculadora</a></li>
+                |
+                <li><a href="#">Videos</a></li>
+                |
+                <li><a href="#">Programa</a></li>
+                |
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar-responsive">
+        <div class="contenido-navbar-responsive">
+            <ul>
+                <li><a href="#inicio">
+                    <span class="material-symbols-outlined">
+                        home
+                        </span>
+                </a></li>
+                |
+                <li><a href="#ejercicios">
+                    <ion-icon name="barbell-outline"></ion-icon>
+                </a></li>
+                |
+                <li><a href="#">
+                    <ion-icon name="calculator-outline"></ion-icon>
+                </a></li>
+                |
+                <li><a href="#">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                        </span>
+                </a></li>
+                |
+                <li><a href="#">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                </a></li>
+                |
+                <li><a href="#">
+                    <span class="material-symbols-outlined">
+                        alternate_email
+                        </span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+        <!-- INICIO -->
+        <div class="inicio" id="inicio">
+            <h2>GymCo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum assumenda pariatur magni similique iusto eos quia praesentium minus, consequatur sapiente recusandae deserunt, non cupiditate eveniet sunt. Minus, commodi officiis.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque eligendi odit, eos accusamus officia rem nulla animi doloremque, ipsam earum quaerat qui 
+            </p>
+        </div>
+        <!-- EJERCICIOS -->
+        <div class="ejercicios" id="ejercicios">
+            <div class="texto">
+                <h2>Ejercicios</h2>
+                <p>Click sobre musculos para expandir</p>
+            </div>
+            <div class="contenedor-imagenes">
+                <img src="css/cuerpo1-delante.png" alt="Cuerpo delantero" class="cuerpo">
+                <img src="css/cuerpo1-detras.png" alt="cuerpo trasero" class="cuerpo">
+                <div class="musculo hombro">
+                    <h3>HOMBRO</h3>
+                </div>
+                <div class="musculo bicep">
+                    <h3>BICEP</h3>
+                </div>
+                <div class="musculo abdomen">
+                    <h3>ABDOMEN</h3>
+                </div>
+                <div class="musculo cuadriceps">
+                    <h3>CUADRICEPS</h3>
+                </div>
+                <div class="musculo pectoral">
+                    <h3>PECTORAL</h3>
+                </div>
+                <div class="musculo tricep">
+                    <h3>TRICEP</h3>
+                </div>
+                <div class="musculo isquios">
+                    <h3>ISQUIOS</h3>
+                </div>
+                <div class="musculo espalda">
+                    <h3>ESPALDA</h3>
+                </div>
+                <div class="musculo gluteos">
+                    <h3>GLUTEOS</h3>
+                </div>
+                <div class="musculo gemelos">
+                    <h3>GEMELOS</h3>
+                </div>
+            </div>
+            <!-- INFO MUSCULOS -->
+            <div class="info-musculo-bicep">
+                <div class="contenedor-info-musculo">
+                    <div class="texto-info-musculo">
+                        <h3>BICEP</h3>
+                        <span class="material-symbols-outlined cerrar">
+                            close
+                            </span>
+                    </div>
+                    <div class="imagenes-ejercicio">
+                        <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
+                        <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
+                        <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
+                        <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
+                        <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
