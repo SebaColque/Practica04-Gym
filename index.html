@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onload="cargarApp()">
     
     <!-- INTRO -->
     <div class="intro">
@@ -125,60 +125,189 @@
                 <p>Click sobre musculos para expandir</p>
             </div>
             <div class="contenedor-imagenes">
-                <img src="css/cuerpo1-delante.png" alt="Cuerpo delantero" class="cuerpo">
-                <img src="css/cuerpo1-detras.png" alt="cuerpo trasero" class="cuerpo">
+                <img src="css/cuerpo/cuerpo1-delante.png" alt="Cuerpo delantero" class="cuerpo">
+                <img src="css/cuerpo/cuerpo1-detras.png" alt="cuerpo trasero" class="cuerpo">
                 <div class="musculo hombro">
-                    <h3>HOMBRO</h3>
+                    <h3 class="musculo-titulo">HOMBRO</h3>
                 </div>
                 <div class="musculo bicep">
-                    <h3>BICEP</h3>
+                    <h3 class="musculo-titulo">BICEP</h3>
                 </div>
                 <div class="musculo abdomen">
-                    <h3>ABDOMEN</h3>
+                    <h3 class="musculo-titulo">ABDOMEN</h3>
                 </div>
                 <div class="musculo cuadriceps">
-                    <h3>CUADRICEPS</h3>
+                    <h3 class="musculo-titulo">CUADRICEPS</h3>
                 </div>
                 <div class="musculo pectoral">
-                    <h3>PECTORAL</h3>
+                    <h3 class="musculo-titulo">PECTORAL</h3>
                 </div>
                 <div class="musculo tricep">
-                    <h3>TRICEP</h3>
+                    <h3 class="musculo-titulo">TRICEP</h3>
                 </div>
                 <div class="musculo isquios">
-                    <h3>ISQUIOS</h3>
+                    <h3 class="musculo-titulo">ISQUIOS</h3>
                 </div>
                 <div class="musculo espalda">
-                    <h3>ESPALDA</h3>
+                    <h3 class="musculo-titulo">ESPALDA</h3>
                 </div>
                 <div class="musculo gluteos">
-                    <h3>GLUTEOS</h3>
+                    <h3 class="musculo-titulo">GLUTEOS</h3>
                 </div>
                 <div class="musculo gemelos">
-                    <h3>GEMELOS</h3>
+                    <h3 class="musculo-titulo">GEMELOS</h3>
                 </div>
             </div>
             <!-- INFO MUSCULOS -->
-            <div class="info-musculo-bicep">
-                <div class="contenedor-info-musculo">
-                    <div class="texto-info-musculo">
-                        <h3>BICEP</h3>
-                        <span class="material-symbols-outlined cerrar">
-                            close
-                            </span>
+            <div class="lista-ejercicios" id="lista-ejercicios">
+                <div class="detector-lista-ejercicios"></div>
+                <!-- <div class="info-musculo-carta-bicep">
+                    <div class="contenedor-info-musculo">
+                        <div class="texto-info-musculo">
+                            <h3>BICEP</h3>
+                            <span class="material-symbols-outlined cerrar">
+                                close
+                                </span>
+                        </div>
+                        <div class="imagenes-ejercicio">
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl con barra</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl predicador con barra ez</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl martillo</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl inclinado con mancuernas</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl concentrado</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="imagenes-ejercicio">
-                        <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
-                        <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
-                        <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
-                        <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
-                        <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
-                    </div>
+                </div> -->
+
+                <!-- <div class="info-musculo-carta-bicep h">
+                    <div class="contenedor-info-musculo">
+                        <div class="texto-info-musculo">
+                            <h3>Hombor</h3>
+                            <span class="material-symbols-outlined cerrar">
+                                close
+                                </span>
+                        </div>
+                        <div class="imagenes-ejercicio">
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl con barra</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-con-barra.webp" alt="curl con barra" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl predicador con barra ez</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-predicador-barra-ez.jpg" alt="curl predicador barra ez" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl martillo</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-martillo.webp" alt="curl martillo" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl inclinado con mancuernas</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-inclinado-mancuernas.jpg" alt="curl inclinado mancuerna" class="img-ejer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="face front">
+                                    <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
+                                </div>
+                                <div class="face back">
+                                    <div class="back-info">
+                                        <h4>Curl concentrado</h4>
+                                    </div>
+                                    <img src="css/bicep/curl-concentracion.jpg" alt="curl concentrado" class="img-ejer">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
+            </div>
+        </div>
+        <!-- CALCULADORA -->
+        <div class="calculadora">
+            <div class="calculadora-contenedor">
+                <input type="checkbox" name="hombre" id="hombre">
+                <input type="checkbox" name="mujer" id="mujer">
             </div>
         </div>
     </div>
 
+    <script src="scripts/Musculo.js"></script>    
     <script src="scripts/app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

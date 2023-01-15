@@ -10,7 +10,7 @@
 }
 
 body{
-    background: url(tactile_noise.webp);
+    background: url(fondos/tactile_noise.webp);
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -214,7 +214,7 @@ hr{
 
 /* INICIO */
 .inicio{
-    background: url(pexels-estudio-polaroid-3112004.jpg) no-repeat center;
+    background: url(imagenes/pexels-estudio-polaroid-3112004.jpg) no-repeat center;
     background-size: cover;
     width: 100%;
     height: 500px;
@@ -334,7 +334,33 @@ hr{
 }
 
 /* INFO MUSCULOS */
-.info-musculo-bicep{
+.lista-ejercicios{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 1px solid red;
+    z-index: 2;
+    animation: show-lista-ejercicios 0.5s linear 0s 1 normal forwards;
+}
+
+.show-lista-ejercicios{
+    display: block;
+}
+
+.detector-lista-ejercicios{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.info-musculo-carta{
     background-color: black;
     width: 80%;
     margin: auto;
@@ -343,16 +369,21 @@ hr{
     top: 10%;
     left: 10%;
     display: none;
+    max-height: 550px;
+    overflow: auto;
+    padding-bottom: 20px;
+    /* z-index: 3; */
 }
 
-.info-musculo-bicep .contenedor-info-musculo{
+.info-musculo-carta .contenedor-info-musculo{
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.info-musculo-bicep .contenedor-info-musculo .texto-info-musculo{
+.info-musculo-carta .contenedor-info-musculo .texto-info-musculo{
     padding: 20px;
     width: 100%;
     background-color: var(--color-naranja);
@@ -365,11 +396,11 @@ hr{
     justify-content: space-between;
 }
 
-.info-musculo-bicep .contenedor-info-musculo .texto-info-musculo .cerrar{
+.info-musculo-carta .contenedor-info-musculo .texto-info-musculo .cerrar{
     cursor: pointer;
 }
 
-.info-musculo-bicep .contenedor-info-musculo .imagenes-ejercicio{
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -378,17 +409,76 @@ hr{
     width: 100%;
 }
 
-.info-musculo-bicep .contenedor-info-musculo .imagenes-ejercicio .img-ejer{
+/* flip */
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card{
     width: 40%;
-    border-radius: 40px;
-    max-height: 130px;
-    box-shadow: 2px 2px 10px rgb(255, 168, 7, 0.5);
+    height: 130px;
+    max-height: 110px;
     margin: 15px;
+    box-shadow: 0px 0px 10px rgb(255, 168, 7, 0.5);
+    border-radius: 40px;
+}
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .front{
+    transform: perspective(600px) rotateY(0deg);
+    width: 40%;
+    max-height: 110px;
+}
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .back{
+    transform: perspective(600px) rotateY(180deg);
+    /* background: url(carta/); */
+    width: 40%;
+    max-height: 110px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .back .back-info{
+    position: absolute;
+    font-size: 25px;
+    color: var(--color-naranja);
+}
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .back img{
+    opacity: 0.1;
+}
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/* flip end */
+
+.info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .img-ejer{
+    width: 100%;
+    border-radius: 40px;
+    max-height: 110px;
 }
 
 .show-info{
     display: block;
     animation: mostrar-info .2s linear 0s 1 normal;
+}
+
+/* CALCULADORA */
+.calculadora{
+    background-color: var(--color-naranja);
+    width: 100%;
+    height: 800px;
 }
 
 /* Animaciones */
@@ -477,6 +567,16 @@ hr{
     to{
         opacity: 1;
     }
+}
+
+@keyframes show-lista-ejercicios {
+    from{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.6);
+     }
+    
 }
 
 /* RESPONSIVE-DESIGN */
