@@ -13,6 +13,7 @@ body{
     background: url(fondos/tactile_noise.webp);
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 3000px;
 }
 
 a{
@@ -155,7 +156,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 50;
 }
 
 .navbar ul,
@@ -206,7 +207,7 @@ hr{
 .contenido{
     /* background-color: rgba(0, 0, 0, 0.8); */
     width: 100%;
-    height: 1000px;
+    /* height: 1000px; */
     /* margin: 20px auto; */
     /* box-shadow: 0 0 5px rgb(255, 168, 7, 0.2); */
     /* padding: 20px; */
@@ -244,6 +245,13 @@ hr{
 }
 
 /* EJERCICIOS */
+.ejercicios{
+    /* outline: 2px solid green; */
+    /* display: inline; */
+    height: 100%;
+    /* box-shadow: 0 10px 5px red; */
+}
+
 .ejercicios .texto{
     background-color: rgba(59, 59, 59, 0.4);
     padding: 55px 30px;
@@ -256,6 +264,7 @@ hr{
 }
 
 .ejercicios .contenedor-imagenes{
+    /* outline: 2px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -264,12 +273,14 @@ hr{
     height: 1200px;
     background-color: rgba(59, 59, 59, 0.4);
     position: relative;
+    box-shadow: 0 10px 5px rgb(117, 80, 10);
 }
 
 .ejercicios img.cuerpo{
     padding: 20px 0px;
     width: 40%;
     height: 50%;
+    /* outline: 2px solid red; */
 }
 
 .ejercicios .musculo{
@@ -341,8 +352,8 @@ hr{
     left: 0;
     width: 100%;
     height: 100%;
-    outline: 1px solid red;
-    z-index: 2;
+    /* outline: 1px solid red; */
+    z-index: 30;
     animation: show-lista-ejercicios 0.5s linear 0s 1 normal forwards;
 }
 
@@ -476,12 +487,251 @@ hr{
 
 /* CALCULADORA */
 .calculadora{
-    background-color: var(--color-naranja);
+    background-color: rgba(255, 168, 7, 0.6);
     width: 100%;
     height: 800px;
+    padding: 55px 30px;
+}
+
+.calculadora .texto-calculadora{
+    color: black;
+    text-shadow: 2px 2px 7px rgba(255, 255, 255, 0.603);
+}
+
+.calculadora-contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.formulario{
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario hr{
+    border: 1px solid var(--color-naranja);
+    box-shadow: 0 0 5px white;
+    opacity: 0.2;
+    /* background-color: white; */
+    margin: 20px 0;
+}
+
+.genero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.genero h3{
+    margin-right: 30px;
+}
+
+.genero #hombre{
+    margin-right: 20px;
+}
+
+
+.calculadora input[type=radio]{
+    display: none;
+}
+
+.calculadora .genero label{
+    /* background-color: blue; */
+    padding: 5px 15px;
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.genero ion-icon{
+    font-size: 40px;
+    color: var(--color-naranja);
+}
+
+.genero .icono-con-relleno{
+    display: none;
+    opacity: 0.7;
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    font-size: 38px;
+}
+.calculadora .genero label:hover{
+    opacity: 0.6
+}
+
+.calculadora .genero input[type=radio]:checked + label .icono-con-relleno{
+    display: block;
+}
+
+.peso-info,
+.altura-info,
+.edad-info{
+    display: flex;
+}
+
+.peso-info h3,
+.altura-info h3,
+.edad-info h3{
+    padding-right: 20px;
+}
+
+.calculadora input[type=number]{
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 4px var(--color-naranja);
+    color: white;
+    width: 20%;
+    text-align: center;
+}
+
+.calculadora input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none; 
+}
+
+.calculadora input[type=number]:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px var(--color-naranja);
+}
+
+.calculadora .factor-actividad-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculadora .factor-actividad-info h3{
+    padding-bottom: 10px;
+}
+
+.calculadora .factor-actividad-info label{
+    font-size: 15px;
+    margin: 5px 0;
+    color: rgba(255, 168, 7, 0.4);
+    cursor: pointer;
+}
+
+.calculadora .factor-actividad-info label:hover{
+    color: var(--color-naranja);
+    opacity: 0.9;
+
+}
+.calculadora .factor-actividad-info input[type=radio]:checked + label{
+    color: var(--color-naranja);
+    text-shadow: 0 0 10px var(--color-naranja)
+}
+
+.calcular-calorias{
+    margin-top: 40px;
+    /* justify-self: center; */
+    align-self: center;
+}
+
+.calcular-calorias button{
+    background-color: var(--color-naranja);
+    padding: 20px;
+    text-align: center;
+    color: black;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 4px 4px 5px black;
+}
+
+.rayo{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    position: relative;
+}
+
+.rayo .cantidad-calorias{
+    font-size: 23px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rayo .sin-relleno{
+    /* background-color: red; */
+    font-size: 300px;
+    z-index: 10;
+    color: rgb(2, 2, 2);
+    /* position: absolute; */
+}
+
+.rayo i.con-relleno{
+    /* display: none; */
+    position: absolute;
+    top: 55px;
+    transform: scaleY(1.3) scaleX(1.2);
+    color: var(--color-naranja);
+    font-size: 200px;
+    z-index: 8;
+}
+
+.rayo .tapar-rayo{
+    width: 200px;
+    height: 300px;
+    z-index: 9;
+    position: absolute;
+    background-color: rgb(168, 116, 15);
+}
+
+.rayo .tapar-rayo.p25{
+    /* background-color: red; */
+    top: 25px;
+    height: 185px;
+    display: none;
+}
+.rayo .tapar-rayo.p50{
+    /* background-color: red; */
+    top: 25px;
+    height: 140px;
+    display: none;
+}
+.rayo .tapar-rayo.p75{
+    /* background-color: red; */
+    top: 25px;
+    height: 65px;
+    display: none;
+}
+.rayo .tapar-rayo.p100{
+    /* background-color: red; */
+    top: 25px;
+    height: 0px;
+    display: none;
+}
+
+.mostrar-rayo{
+    display: block !important;
+    animation: mostrar-rayo 3s linear 0s 1 normal;
+}
+
+/* VIDEOS */
+.videos{
+    background-color: blue;
+    height: 400px;
 }
 
 /* Animaciones */
+
 @keyframes logo {
     0%{
         transform: rotate(0) scale(1)
@@ -575,8 +825,17 @@ hr{
     }
     to{
         background-color: rgba(0, 0, 0, 0.6);
-     }
+    }
     
+}
+
+@keyframes mostrar-rayo {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 /* RESPONSIVE-DESIGN */
@@ -584,7 +843,7 @@ hr{
     .navbar{
         display: none;
     }
-
+    
     .navbar-responsive{
         display: flex;
     }

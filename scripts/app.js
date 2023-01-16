@@ -178,3 +178,67 @@ document.addEventListener('click', (e)=>{
 //         document.querySelector(`.lista-ejercicios`).classList.remove('show-lista-ejercicios')
 //     }
 // })
+
+
+document.getElementById('calcular').addEventListener('click', (e)=>{
+
+    document.querySelector('.tapar-rayo.p25').classList.remove('mostrar-rayo')
+    document.querySelector('.tapar-rayo.p50').classList.remove('mostrar-rayo')
+    document.querySelector('.tapar-rayo.p75').classList.remove('mostrar-rayo')
+    document.querySelector('.tapar-rayo.p100').classList.remove('mostrar-rayo')
+
+    
+    let forma = document.forms['forma'];
+    let genero = forma['genero'].value;
+    let peso = parseFloat(forma['peso'].value);
+    let altura = parseFloat(forma['altura'].value);
+    let edad = parseFloat(forma['edad'].value);
+    let factor = parseFloat(forma['factor'].value);
+    let cantidadInfo = [peso, altura, edad, factor];
+    
+    let vacio = false;
+    let cantidadHTML = '';
+
+    if(genero == ''){
+        vacio = true;
+    }
+    for(let info of cantidadInfo){
+        if(isNaN(info)){
+            vacio = true;
+        }
+    }
+
+    if(vacio){
+        cantidadHTML = 'Complete todos los campos';
+    }
+    else{
+        let cantidad = 0;
+        if(genero === 'mujer'){
+            cantidad = ((655 + (9.6 * peso)) + ((1.8 * altura) - (4.7 * edad))) * factor;
+            
+        }
+        else if(genero === 'hombre'){
+            cantidad = ((66 + (13.7 * peso)) + ((5 * altura) - (6.8 * edad))) * factor;
+        }
+        cantidadHTML = `Calorias necesarias aproximadamente:<br><br> 
+        Ganar peso: ${Math.trunc(cantidad*1.2)} cal.<br>
+        Manter peso: ${Math.trunc(cantidad)} cal.<br>
+        Perder peso: ${Math.trunc(cantidad*0.8)} cal.`
+        
+        if(cantidad > 0 && cantidad < 1500){
+            document.querySelector('.tapar-rayo.p25').classList.add('mostrar-rayo')
+        }
+        else if(cantidad >= 1500 && cantidad < 2000){
+            document.querySelector('.tapar-rayo.p50').classList.add('mostrar-rayo')
+        }
+        else if(cantidad >= 200 && cantidad < 3000){
+            document.querySelector('.tapar-rayo.p75').classList.add('mostrar-rayo')
+        }
+        else if(cantidad >= 3000){
+            document.querySelector('.tapar-rayo.p100').classList.add('mostrar-rayo')
+        }
+    }
+    
+    document.querySelector('.cantidad-calorias').innerHTML = cantidadHTML;
+    
+})
