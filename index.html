@@ -57,17 +57,17 @@
     <nav class="navbar">
         <div class="contenido-navbar">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#inicio" class="inicio-a">Inicio</a></li>
                 |
-                <li><a href="#ejercicios">Ejercicios</a></li>
+                <li><a href="#ejercicios" class="ejercicios-a">Ejercicios</a></li>
                 |
-                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#calculadora" class="calculadora-a">Calculadora</a></li>
                 |
-                <li><a href="#videos">Videos</a></li>
+                <li><a href="#videos" class="videos-a">Videos</a></li>
                 |
-                <li><a href="#programa">Programa</a></li>
+                <li><a href="#planes" class="planes-a">Planes</a></li>
                 |
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto" class="contacto-a">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -75,33 +75,33 @@
     <nav class="navbar-responsive">
         <div class="contenido-navbar-responsive">
             <ul>
-                <li><a href="#inicio">
+                <li><a href="#inicio" class="inicio-a">
                     <span class="material-symbols-outlined">
                         home
                         </span>
                 </a></li>
                 |
-                <li><a href="#ejercicios">
+                <li><a href="#ejercicios" class="ejercicios-a">
                     <ion-icon name="barbell-outline"></ion-icon>
                 </a></li>
                 |
-                <li><a href="#calculadora">
+                <li><a href="#calculadora" class="calculadora-a">
                     <ion-icon name="calculator-outline"></ion-icon>
                 </a></li>
                 |
-                <li><a href="#videos">
+                <li><a href="#videos" class="videos-a">
                     <span class="material-symbols-outlined">
                         play_circle
                         </span>
                 </a></li>
                 |
-                <li><a href="#programa">
+                <li><a href="#planes" class="planes-a">
                     <span class="material-symbols-outlined">
                         shopping_cart
                         </span>
                 </a></li>
                 |
-                <li><a href="#contacto">
+                <li><a href="#contacto" class="contacto-a">
                     <span class="material-symbols-outlined">
                         alternate_email
                         </span>
@@ -358,6 +358,9 @@
                     <i class="bi bi-lightning sin-relleno">
                         <!-- <div class="tapar-rayo"></div> -->
                     </i>
+                    <div class="tapar-rayo-completo-caja">
+                        <div class="tapar-rayo-completo"></div>
+                    </div>
                     <div class="tapar-rayo p25"></div>
                     <div class="tapar-rayo p50"></div>
                     <div class="tapar-rayo p75"></div>
@@ -368,9 +371,132 @@
             </div>
         </div>
         <!-- VIDEOS -->
-        <div class="videos">
-
+        <div class="videos" id="videos">
+            <div class="videos-contenedor">
+                <div class="texto-video">
+                    <h3>Videos</h3>
+                    <p>Rutinas y ejercicios para los distintos musculos</p>
+                </div>
+                <div class="caja-videos">
+                    <div class="video-musculo">
+                        <!-- <div class="musculo-actual">
+                            <span class="material-symbols-outlined flecha-atras">
+                                arrow_back_ios
+                                </span>
+                                <h4 class="nombre-musculo-actual">Hombro</h4>
+                                <span class="material-symbols-outlined flecha-adelante">
+                                    arrow_forward_ios
+                                    </span>
+                        </div>
+                        <div class="frame">
+                            <iframe src="https://www.youtube.com/embed/xHU2Jr_Seho" title="Rutina para trabajar todo el hombro (No falta nada)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- PLANES -->
+        <div class="planes" id="planes">
+            <div class="titulo-planes">
+                <h3>Planes</h3>
+            </div>
+            <div class="planes-contenedor">
+                <div class="plan">
+                    <div class="titulo-plan">
+                        <h5>Plan Básico</h5>
+                    </div>
+                    <div class="precio">
+                        <p>$5000.00</p>
+                    </div>
+                    <hr>
+                    <div class="descripcion">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                    <div class="boton-comprar">
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+                <div class="plan recomendado">
+                    <div class="titulo-plan">
+                        <h5>Plan Intermedio</h5>
+                    </div>
+                    <div class="precio">
+                        <p>$7000.00</p>
+                    </div>
+                    <hr>
+                    <div class="descripcion">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                    <div class="boton-comprar">
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+                <div class="plan">
+                    <div class="titulo-plan">
+                        <h5>Plan Ultra</h5>
+                    </div>
+                    <div class="precio">
+                        <p>$10000.00</p>
+                    </div>
+                    <hr>
+                    <div class="descripcion">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                    <div class="boton-comprar">
+                        <button>COMPRAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTACTO - FOOTER -->
+        <footer class="contacto" id="contacto">
+            <div class="contacto-contenedor">
+                <div class="redes">
+                    <a href="#">
+                        <ion-icon name="logo-discord"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                </div>
+                <hr>
+                <div class="copyright">
+                    <span class="material-symbols-outlined">
+                        copyright
+                        </span>
+                    <p>2023ColqueSebastián Todos los derechos reservados </p>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="scripts/Musculo.js"></script>    

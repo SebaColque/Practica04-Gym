@@ -26,3 +26,24 @@ class Musculo{
         this._imagen = imagen;
     }
 }
+
+class videoEjercicio{
+    constructor(nombre, video){
+        this._nombre = nombre;
+        this._video = video;
+    }
+
+    get nombre(){
+        return this._nombre
+    }
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+
+    get video(){
+        return this._video
+    }
+    set video(video){
+        this._video = video;
+    }
+}
