@@ -325,23 +325,28 @@ hr{
 .ejercicios .hombro{
     position: absolute;
     top: 5%;
-    left: 31%;
-
+    /* left: 31%; */
+    right: 60%;
+    /* top: 5vh;
+    right: 60vw; */
 }
 .ejercicios .bicep{
     position: absolute;
     top: 14%;
-    left: 29%;
+    /* left: 29%; */
+    right: 65%;
 }
 .ejercicios .abdomen{
     position: absolute;
     top: 20%;
-    left: 23%;
+    /* left: 23%; */
+    right: 66%;
 }
 .ejercicios .cuadriceps{
     position: absolute;
     top: 29%;
-    left: 25%;
+    /* left: 25%; */
+    right: 63%;
 }
 .ejercicios .pectoral{
     position: absolute;
@@ -351,16 +356,18 @@ hr{
 .ejercicios .tricep{
     position: absolute;
     top: 57%;
-    left: 27%;
+    /* left: 27%; */
+    right: 65%;
 }
 .ejercicios .isquios{
     position: absolute;
     top: 80%;
-    left: 27%;
+    /* left: 27%; */
+    right: 65%;
 }
 .ejercicios .espalda{
     position: absolute;
-    top: 54%;
+    top: 55%;
     left: 62%;
 }
 .ejercicios .gluteos{
@@ -1283,7 +1290,12 @@ hr{
 @media screen and (max-width: 450px){
     .navbar-responsive span,
     .navbar-responsive ion-icon{
-        font-size: 13px;
+        font-size: 22px;
+        /* margin: 0; */
+    }
+
+    .navbar-responsive li{
+        padding: 5px;
     }
 
     .musculo{
