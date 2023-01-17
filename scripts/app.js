@@ -179,11 +179,11 @@ const enPantalla = ()=>{
 
 setInterval(enPantalla, 100);
 
-console.log(arregloVideos.length)
+// console.log(arregloVideos.length)
 
 const cargarVideo = (indice)=>{
 
-    console.log(indice)
+    // console.log(indice)
     if(indice == 0){
         let video = arregloVideos[indice]
         let videoHTML = `
