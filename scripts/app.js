@@ -162,9 +162,11 @@ const enPantalla = ()=>{
             if (isInViewport(elem)) {
                 // console.log(document.querySelector(`.${nombreView}-a`))
                 document.querySelector(`.${nombreView}-a`).style.color = 'var(--color-naranja)';
+                document.querySelector(`.${nombreView}-icon`).style.color = 'var(--color-naranja)';
             }
             else{
-                document.querySelector(`.${nombreView}-a`).style.color = ''
+                document.querySelector(`.${nombreView}-a`).style.color = '';
+                document.querySelector(`.${nombreView}-icon`).style.color = '';
             }
         }
         catch(error){
