@@ -1158,6 +1158,10 @@ hr{
         display: flex;
     }
 
+    .back-info{
+        font-size: 3vw !important;
+    }
+
     .rayo{
         transform: scale(0.6);
     }
@@ -1188,6 +1192,25 @@ hr{
 
     .redes a{
         padding: 5px !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .back,
+    .info-musculo-carta .contenedor-info-musculo .imagenes-ejercicio .card .front{
+        width: 70%;
     }
 }
 
