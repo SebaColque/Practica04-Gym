@@ -326,7 +326,7 @@ hr{
     position: absolute;
     top: 5%;
     left: 31%;
-    
+
 }
 .ejercicios .bicep{
     position: absolute;
@@ -1266,7 +1266,7 @@ hr{
     }
 
     .calculadora .genero label{
-        padding: 0;
+        /* padding: 0; */
     }
 
     .calculadora .altura-info h3{
