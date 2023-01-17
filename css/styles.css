@@ -326,6 +326,7 @@ hr{
     position: absolute;
     top: 5%;
     left: 31%;
+    
 }
 .ejercicios .bicep{
     position: absolute;
@@ -971,6 +972,10 @@ hr{
     margin: 15px 0;
 }
 
+.planes .planes-contenedor .plan.recomendado .descripcion{
+    height: 60%;
+}
+
 .planes .planes-contenedor .plan.recomendado .boton-comprar button{
     color: black;
     font-weight: bold;
@@ -1138,6 +1143,12 @@ hr{
 }
 
 /* RESPONSIVE-DESIGN */
+@media screen and (min-width: 741px) {
+    .planes .planes-contenedor .plan .descripcion{
+        font-size: 1.2vw;
+    }
+}
+
 @media screen and (max-width: 740px) {
     .navbar{
         display: none;
@@ -1146,17 +1157,123 @@ hr{
     .navbar-responsive{
         display: flex;
     }
+
+    .rayo{
+        transform: scale(0.6);
+    }
+
+    .caja-videos{
+        width: 100% !important;
+    }
+
+    .planes-contenedor{
+        flex-direction: column !important;
+        height: auto !important;
+        row-gap: 50px !important;
+        padding: 20px 0 !important;
+    }
+
+    .planes-contenedor .plan{
+        height: auto !important;
+    }
+
+    .planes-contenedor .plan .boton-comprar{
+        transform: scale(0.9);
+    }
+
+    .redes{
+        display: flex;
+        align-items: center !important;
+    }
+
+    .redes a{
+        padding: 5px !important;
+    }
 }
 
 @media screen and (max-width: 500px){
     .navbar-responsive a:hover{
         margin: 0;
     }
+
+    .inicio{
+        /* grid-template-rows: 30% 70% !important; */
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .inicio h2{
+        padding-top: 40px;
+    }
+
+    .calculadora .genero h3{
+        margin-right: 0;
+    }
+
+    .calculadora .genero label{
+        margin: 0;
+    }
+
+    .rayo{
+        transform: scale(0.5);
+    }
+
+    .videos{
+        padding: 20px 0;
+    }
+
+    .videos-contenedor{
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .videos .caja-videos{
+        padding: 20px 5px !important;
+    }
+
+    .videos .frame{
+        width: 100%;
+    }
+
+    .plan.recomendado{
+        width: 90%;
+    }
+
+    .redes ion-icon{
+        font-size: 10vw !important;
+    }
+
+    .copyright{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright p{
+        padding-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 450px){
     .navbar-responsive span,
     .navbar-responsive ion-icon{
-        font-size: 15px;
+        font-size: 13px;
     }
-}
+
+    .musculo{
+        transform: scale(0.8);
+    }
+
+    .calculadora .genero label{
+        padding: 0;
+    }
+
+    .calculadora .altura-info h3{
+        padding-right: 10px;
+    }
+
+    .videos .texto-video{
+        padding: 20px;
+    }
+}  
