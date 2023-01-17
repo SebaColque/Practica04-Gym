@@ -369,6 +369,7 @@ document.getElementById('calcular').addEventListener('click', (e)=>{
         else if(cantidad >= 3000){
             document.querySelector('.tapar-rayo-completo').style.transform = 'translateY(-290px)'
             // document.querySelector('.tapar-rayo.p100').classList.add('mostrar-rayo')
+            // 
         }
     }
     
